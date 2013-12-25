@@ -35,27 +35,27 @@ app.get('/blog/new', function(request, response) {
 
 app.post('/blog/new', function(request, response) {
   articleProvider.save({
-  	title: request.param('title'),
-  	body: request.param('body')
+      title: request.param('title'),
+      body: request.param('body')
   }, function(error, docs) {
-  	response.redirect('/');
+    response.redirect('/');
   });
 });
 
 app.get('/blog/:id', function(request, response) {
-	articleProvider.findById(request.params.id, function (error, article) {
-		response.render('blog_show.jade', {title: article.title, article: article});
-	});
+  articleProvider.findById(request.params.id, function (error, article) {
+    response.render('blog_show.jade', {title: article.title, article: article});
+  });
 });
 
 app.post('/blog/addComment', function(request, response) {
-	articleProvider.addCommentToArticle(request.param('_id'), {
-		person: request.param('person'),
-		comment: request.param('comment'),
-		created_at: new Date()
-	}, function(error, docs) {
-		response.redirect('/blog/' + req.param('_id'));
-	});
+  articleProvider.addCommentToArticle(request.param('_id'), {
+    person: request.param('person'),
+    comment: request.param('comment'),
+    created_at: new Date()
+  }, function(error, docs) {
+    response.redirect('/blog/' + req.param('_id'));
+  });
 });
 
 var listening_app = app.listen(3000);

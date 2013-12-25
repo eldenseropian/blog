@@ -48,7 +48,7 @@ ArticleProvider.prototype.findById = function(id, callback) {
             if (error) {
               callback(error);
             } else {
-              callback(null, result);
+              callback(null, results);
             }
           }
       );
