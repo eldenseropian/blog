@@ -54,7 +54,7 @@ app.post('/blog/addComment', function(request, response) {
     comment: request.param('comment'),
     created_at: new Date()
   }, function(error, docs) {
-    response.redirect('/blog/' + req.param('_id'));
+    response.redirect('/blog/' + request.param('_id'));
   });
 });
 

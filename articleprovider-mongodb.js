@@ -73,14 +73,41 @@ ArticleProvider.prototype.save = function(articles, callback) {
           article.comments = [];
         }
         
-				for (var j = 0; j < article.comments.length; j++) {
-					article.comments[j].created_at = new Date();
-				}
+        for (var j = 0; j < article.comments.length; j++) {
+          article.comments[j].created_at = new Date();
+        }
       }
       
       article_collection.insert(articles, function() {
-      	callback(null, articles);
+        callback(null, articles);
       });
+    }
+  });
+};
+
+ArticleProvider.prototype.addCommentToArticle = function(articleId, comment,
+    callback) {
+  this.getCollection(function(error, article_collection) {
+    if (error) {
+      callback(error);
+    } else {
+      /*
+      console.log('\n\n' + article_collection + '\n\n');
+      console.log('\n\n' + article_collection.db + '\n\n');
+      console.log('\n\n' + article_collection.db.bson_serializer + '\n\n');
+      console.log('\n\n' + article_collection + '\n\n');
+      */
+      article_collection.update(
+        {_id: article_collection.db.bson_serializer.ObjectID.createFromHexString(articleId)},
+        {'$push': {comments: comment}},
+        function(error, article) {
+          if (error) {
+            callback(error);
+          } else {
+            callback(null, article);
+          }
+        }
+      );
     }
   });
 };
