@@ -91,12 +91,6 @@ ArticleProvider.prototype.addCommentToArticle = function(articleId, comment,
     if (error) {
       callback(error);
     } else {
-      /*
-      console.log('\n\n' + article_collection + '\n\n');
-      console.log('\n\n' + article_collection.db + '\n\n');
-      console.log('\n\n' + article_collection.db.bson_serializer + '\n\n');
-      console.log('\n\n' + article_collection + '\n\n');
-      */
       article_collection.update(
         {_id: article_collection.db.bson_serializer.ObjectID.createFromHexString(articleId)},
         {'$push': {comments: comment}},
@@ -111,5 +105,16 @@ ArticleProvider.prototype.addCommentToArticle = function(articleId, comment,
     }
   });
 };
+
+ArticleProvider.prototype.deleteAllPosts = function(callback) {
+  this.getCollection(function(error, article_collection) {
+    if (error) {
+      callback(error);
+    } else {
+      article_collection.remove();
+      callback(null);
+    }
+  });
+};    
 
 exports.ArticleProvider = ArticleProvider;

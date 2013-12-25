@@ -1,35 +1,35 @@
 body {
   font-family: "Helvetica Neue", "Lucida Grande", "Arial";
-  font-size: 13px;
+  font-size: 1em;
   text-align: center;
-  text-stroke: 1px rgba(255,255,255,0.1);
   color: #555;
 }
 h1,
 h2 {
   margin: 0;
-  font-size: 22px;
   color: #343434;
 }
 h1 {
   text-shadow: 1px 2px 2px #ddd;
-  font-size: 60px;
+  font-size: 5em;
+}
+h2 {
+  font-size: 2em;
 }
 #articles {
   text-align: left;
   margin-left: auto;
   margin-right: auto;
-  width: 320px;
+  width: 50%;
 }
 #articles .article {
-  margin: 20px;
+  margin: 1.25em;
 }
 #articles .article .created_at {
   display: none;
 }
 #articles .article .title {
   font-weight: bold;
-  text-decoration: underline;
   background-color: #eee;
 }
 #articles .article .body {
@@ -38,16 +38,32 @@ h1 {
 .article .created_at {
   display: none;
 }
+.article .body p {
+  background-color: #eee;
+  border: 1px solid #000;
+  margin: auto;
+  padding: 1em;
+  width: 50%;
+}
+.article #comment-author,
+.article #comment-content {
+  margin: 1em;
+}
+.article #comments,
+.article #new-comment {
+  margin-top: 1em;
+}
 .article input[type =text] {
-  width: 490px;
-  margin-left: 16px;
+  width: 10em;
+  margin-left: 1em;
 }
 .article input[type =button],
 .article input[type =submit] {
   text-align: left;
-  margin-left: 440px;
+  margin-left: 50%;
 }
 .article textarea {
-  width: 490px;
-  height: 90px;
+  height: 5em;
+  padding: 1em;
+  width: 50%;
 }

@@ -1,23 +1,27 @@
 extends layout
 
 block content
-  h1= title
   div.article
+    h1= title
     div.created_at= article.created_at
-    div.title= article.title
-    div.body= article.body
-    - each comment in article.comments
-      div.comment
-        div.person= comment.person
-        div.comment= comment.comment
-    div
+    div.body
+      p= article.body
+    div#comments
+      h2 Comments
+      - each comment in article.comments
+        div.comment
+          span.person
+            b= comment.person
+          span  says : 
+          span.comment= comment.comment
+    div#new-comment
+      h2 Add A Comment
       form(method="post", action="/blog/addComment")
         input(type="hidden", name="_id", value=article._id.toHexString())
-        div
-          span Author :
+        div#comment-author
+          span Author:
           input(type="text", name="person", id="addCommentPerson")
-        div
-          span Comment :
-          textarea(name="comment", rows=5, id="addCommentComment")
+        div#comment-content
+          textarea(name="comment", rows=5, id="addCommentComment" placeholder="Type your comment here")
         div#editArticleSubmit
           input(type="submit", value="Send")

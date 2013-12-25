@@ -23,10 +23,14 @@ app.configure('production', function() {
 
 var articleProvider = new ArticleProvider('localhost', 27017);
 
-app.get('/', function(request, response){
-    articleProvider.findAll(function(error, docs) {
-        response.render('index.jade', {title: 'Blog', articles: docs});
-    });
+app.get('/', function(request, response) {
+  response.redirect('/blog');
+});
+
+app.get('/blog', function(request, response) {
+  articleProvider.findAll(function(error, docs) {
+    response.render('index.jade', {title: 'Blog', articles: docs});
+  });
 });
 
 app.get('/blog/new', function(request, response) {
@@ -38,7 +42,13 @@ app.post('/blog/new', function(request, response) {
       title: request.param('title'),
       body: request.param('body')
   }, function(error, docs) {
-    response.redirect('/');
+    response.redirect('/blog');
+  });
+});
+
+app.get('/blog/delete', function(request, response) {
+  articleProvider.deleteAllPosts(function(error) {
+    response.redirect('/blog');
   });
 });
 
