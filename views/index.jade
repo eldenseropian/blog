@@ -9,3 +9,6 @@ block content
         div.title  
           a(href = "/blog/" + article._id.toHexString())!= article.title
         div.body= article.body
+  div#new-post
+    form(method="post")
+      input(type="submit", value="New Post")

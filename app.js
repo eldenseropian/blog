@@ -33,6 +33,10 @@ app.get('/blog', function(request, response) {
   });
 });
 
+app.post('/blog', function(request, response) {
+  response.redirect('/blog/new');
+});
+
 app.get('/blog/new', function(request, response) {
   response.render('blog_new.jade', {title: 'New Post'});
 });
