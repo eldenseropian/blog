@@ -32,7 +32,7 @@ block content
       form(method="post", action="/blog/addComment")
         input(type="hidden", name="_id", value=article._id.toHexString())
         div#comment-author
-          span Author:
+          span Your Name:
           input(type="text", name="person", id="addCommentPerson")
         div#comment-content
           textarea(name="comment", rows=5, id="addCommentComment" placeholder="Type your comment here")

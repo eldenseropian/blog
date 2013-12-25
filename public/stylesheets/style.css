@@ -1,18 +1,18 @@
 body {
-  background: #f8f0da;
-  color: #5c2e00;
+  background: #f0eab9;
+  color: #4c4a3b;
   font-family: sans, sans-serif;
   font-size: 1em;
   text-align: center;
 }
 h1,
 h2 {
-  color: #5c2e00;
+  text-shadow: 0.04em 0.04em rgba(76,74,59,0.5);
+  color: #4c4a3b;
   margin: 0;
 }
 h1 {
   font-size: 5em;
-  text-shadow: 1px 2px 2px #ddd;
 }
 h2 {
   font-size: 2em;
@@ -20,7 +20,7 @@ h2 {
 input[type =submit] {
   background: #fff;
   border-radius: 0.5em;
-  color: #5c2e00;
+  color: #4c4a3b;
   font-family: sans, sans-serif;
   padding: 0.5em;
 }
@@ -30,7 +30,7 @@ input[type =text] {
   width: 10em;
 }
 textarea {
-  border: 1px solid #5c2e00;
+  border: 1px solid #4c4a3b;
   border-radius: 1em;
   height: 5em;
   padding: 1em;
@@ -43,35 +43,37 @@ textarea {
   width: 50%;
 }
 #articles .article {
-  margin: 1.25em;
+  border: 2px solid #4c4a3b;
+  border-radius: 1em;
+  box-shadow: 1em 1em 0.5em rgba(76,74,59,0.5);
+  margin-bottom: 2em;
+  margin-top: 2em;
 }
 #articles .article .body {
   background-color: #fff;
   border-radius: 0 0 1em 1em;
-  border: 1px solid #5c2e00;
   padding: 1em;
+  word-wrap: break-word;
 }
 #articles .article .created_at {
   display: none;
 }
 #articles .article .title {
-  background-color: #ffb2b2;
+  background-color: #bfc516;
   border-radius: 1em 1em 0 0;
-  border: 1px solid #5c2e00;
-  border-bottom: 0;
   font-weight: bold;
   padding: 1em;
 }
 #articles .article .title a {
-  color: #5c2e00;
+  color: #4c4a3b;
 }
 .post hr {
-  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(92,46,0,0.75), rgba(0,0,0,0));
-  background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(92,46,0,0.75), rgba(0,0,0,0));
-  background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(92,46,0,0.75), rgba(0,0,0,0));
-  background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(92,46,0,0.75), rgba(0,0,0,0));
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(231,121,101,0.75), rgba(0,0,0,0));
+  background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(231,121,101,0.75), rgba(0,0,0,0));
+  background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(231,121,101,0.75), rgba(0,0,0,0));
+  background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(231,121,101,0.75), rgba(0,0,0,0));
   border: 0;
-  height: 1px;
+  height: 5px;
   margin-bottom: 2em;
   margin-left: auto;
   margin-right: auto;
@@ -89,26 +91,27 @@ textarea {
 }
 .post .body p {
   background-color: #fff;
-  border: 1px solid #5c2e00;
+  border: 1px solid #4c4a3b;
   border-radius: 1em;
   margin: auto;
   padding: 1em;
   width: 50%;
+  word-wrap: break-word;
 }
 .post .comment {
-  background: #ffb2b2;
-  border-left: 1px solid #5c2e00;
-  border-right: 1px solid #5c2e00;
+  background: #bfc516;
+  border-left: 1px solid #4c4a3b;
+  border-right: 1px solid #4c4a3b;
   margin: auto;
   padding: 0.5em;
   width: 50%;
 }
 .post .comment:first-child {
   border-radius: 1em 1em 0 0;
-  border-top: 1px solid #5c2e00;
+  border-top: 1px solid #4c4a3b;
 }
 .post .comment:last-child {
-  border-bottom: 1px solid #5c2e00;
+  border-bottom: 1px solid #4c4a3b;
   border-radius: 0 0 1em 1em;
 }
 .post .comment:nth-child(even) {

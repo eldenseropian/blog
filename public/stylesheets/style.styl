@@ -1,21 +1,21 @@
 body
-  background #F8F0DA 
-  color #5C2E00
+  background #F0EAB9 
+  color #4C4A3B
   font-family sans, sans-serif 
   font-size 1em
   text-align center
 h1, h2
-  color #5C2E00
+  text-shadow .04em .04em rgba(76,74,59,.5)
+  color #4C4A3B
   margin 0
 h1
   font-size 5em
-  text-shadow 1px 2px 2px #ddd
 h2
   font-size 2em
 input[type =submit]
   background #FFFFFF
   border-radius .5em
-  color #5C2E00
+  color #4C4A3B
   font-family sans, sans-serif
   padding .5em
 input[type =text]
@@ -23,7 +23,7 @@ input[type =text]
   margin-bottom 1em
   width 10em
 textarea
-  border 1px solid #5C2E00
+  border 1px solid #4C4A3B
   border-radius 1em
   height 5em
   padding 1em
@@ -34,31 +34,33 @@ textarea
   text-align left
   width 50%
   .article
-    margin 1.25em
+    border 2px solid #4C4A3B
+    border-radius 1em
+    box-shadow 1em 1em .5em rgba(76,74,59,.5)
+    margin-bottom 2em
+    margin-top 2em
     .body
       background-color #FFFFFF
       border-radius 0 0 1em 1em
-      border 1px solid #5C2E00
       padding 1em
+      word-wrap break-word
     .created_at
       display none
     .title
-      background-color #FFB2B2
+      background-color #BFC516
       border-radius 1em 1em 0 0
-      border 1px solid #5C2E00
-      border-bottom 0
       font-weight bold
       padding 1em
       a
-        color #5C2E00
+        color #4C4A3B
 .post
   hr
-    background-image -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(92,46,0,0.75), rgba(0,0,0,0))
-    background-image    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(92,46,0,0.75), rgba(0,0,0,0))
-    background-image     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(92,46,0,0.75), rgba(0,0,0,0))
-    background-image      -o-linear-gradient(left, rgba(0,0,0,0), rgba(92,46,0,0.75), rgba(0,0,0,0)) 
+    background-image -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(231,121,101,0.75), rgba(0,0,0,0))
+    background-image    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(231,121,101,0.75), rgba(0,0,0,0))
+    background-image     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(231,121,101,0.75), rgba(0,0,0,0))
+    background-image      -o-linear-gradient(left, rgba(0,0,0,0), rgba(231,121,101,0.75), rgba(0,0,0,0)) 
     border 0
-    height 1px
+    height 5px
     margin-bottom 2em
     margin-left auto
     margin-right auto
@@ -72,23 +74,24 @@ textarea
     margin-top 1em
     p
       background-color #FFFFFF
-      border 1px solid #5C2E00
+      border 1px solid #4C4A3B
       border-radius 1em
       margin auto
       padding 1em
       width 50%
+      word-wrap break-word
   .comment
-    background #FFB2B2
-    border-left 1px solid #5C2E00
-    border-right 1px solid #5C2E00
+    background #BFC516
+    border-left 1px solid #4C4A3B
+    border-right 1px solid #4C4A3B
     margin auto
     padding .5em
     width 50%
   .comment:first-child
     border-radius 1em 1em 0 0
-    border-top 1px solid #5C2E00
+    border-top 1px solid #4C4A3B
   .comment:last-child
-    border-bottom 1px solid #5C2E00
+    border-bottom 1px solid #4C4A3B
     border-radius 0 0 1em 1em
   .comment:nth-child(even)
     background #FFFFFF
