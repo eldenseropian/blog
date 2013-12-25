@@ -6,17 +6,20 @@ block content
     div.created_at= article.created_at
     div.body
       p= article.body
+    hr
     div#comments
       h2 Comments
       if article.comments.length > 0
-        - each comment in article.comments
-          div.comment
-            span.person
-              b= comment.person
-            span  says : 
-            span.comment= comment.comment
+        div#comment-list
+          - each comment in article.comments
+            div.comment
+              span.person
+                b= comment.person
+              span  says : 
+              span= comment.comment
       else
         i This post has no comments yet.
+    hr
     div#new-comment
       h2 Add A Comment
       form(method="post", action="/blog/addComment")
@@ -26,5 +29,5 @@ block content
           input(type="text", name="person", id="addCommentPerson")
         div#comment-content
           textarea(name="comment", rows=5, id="addCommentComment" placeholder="Type your comment here")
-        div#editArticleSubmit
+        div#comment-submit
           input(type="submit", value="Submit Comment")
