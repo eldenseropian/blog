@@ -12,6 +12,22 @@ h1
   text-shadow 1px 2px 2px #ddd
 h2
   font-size 2em
+input[type =submit]
+  background #FFFFFF
+  border-radius .5em
+  color #5C2E00
+  font-family sans, sans-serif
+  padding .5em
+input[type =text]
+  margin-left 1em
+  margin-bottom 1em
+  width 10em
+textarea
+  border 1px solid #5C2E00
+  border-radius 1em
+  height 5em
+  padding 1em
+  width 50%
 #articles
   margin-left auto
   margin-right auto
@@ -21,14 +37,21 @@ h2
     margin 1.25em
     .body
       background-color #FFFFFF
+      border-radius 0 0 1em 1em
+      border 1px solid #5C2E00
+      padding 1em
     .created_at
       display none
     .title
       background-color #FFB2B2
+      border-radius 1em 1em 0 0
+      border 1px solid #5C2E00
+      border-bottom 0
       font-weight bold
+      padding 1em
       a
         color #5C2E00
-.article
+.post
   hr
     background-image -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(92,46,0,0.75), rgba(0,0,0,0))
     background-image    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(92,46,0,0.75), rgba(0,0,0,0))
@@ -42,21 +65,7 @@ h2
     margin-top 2em
     width 50%
   input[type =submit]
-    background #FFFFFF
-    border-radius .5em
-    color #5C2E00
     float right
-    font-family sans, sans-serif
-    padding .5em
-  input[type =text]
-    margin-left 1em
-    width 10em
-  textarea
-    border 1px solid #5C2E00
-    border-radius 1em
-    height 5em
-    padding 1em
-    width 50%
   .created_at
     display none
   .body
@@ -83,6 +92,8 @@ h2
     border-radius 0 0 1em 1em
   .comment:nth-child(even)
     background #FFFFFF
+  .comment.single-comment
+    border-radius 1em
   #comment-author
     margin-top 1em
   #comment-content
@@ -92,3 +103,5 @@ h2
   #comment-submit
     margin auto
     width 50%
+#edit-article-body
+  height 15em

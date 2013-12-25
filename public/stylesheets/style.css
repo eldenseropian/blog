@@ -17,6 +17,25 @@ h1 {
 h2 {
   font-size: 2em;
 }
+input[type =submit] {
+  background: #fff;
+  border-radius: 0.5em;
+  color: #5c2e00;
+  font-family: sans, sans-serif;
+  padding: 0.5em;
+}
+input[type =text] {
+  margin-left: 1em;
+  margin-bottom: 1em;
+  width: 10em;
+}
+textarea {
+  border: 1px solid #5c2e00;
+  border-radius: 1em;
+  height: 5em;
+  padding: 1em;
+  width: 50%;
+}
 #articles {
   margin-left: auto;
   margin-right: auto;
@@ -28,18 +47,25 @@ h2 {
 }
 #articles .article .body {
   background-color: #fff;
+  border-radius: 0 0 1em 1em;
+  border: 1px solid #5c2e00;
+  padding: 1em;
 }
 #articles .article .created_at {
   display: none;
 }
 #articles .article .title {
   background-color: #ffb2b2;
+  border-radius: 1em 1em 0 0;
+  border: 1px solid #5c2e00;
+  border-bottom: 0;
   font-weight: bold;
+  padding: 1em;
 }
 #articles .article .title a {
   color: #5c2e00;
 }
-.article hr {
+.post hr {
   background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(92,46,0,0.75), rgba(0,0,0,0));
   background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(92,46,0,0.75), rgba(0,0,0,0));
   background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(92,46,0,0.75), rgba(0,0,0,0));
@@ -52,32 +78,16 @@ h2 {
   margin-top: 2em;
   width: 50%;
 }
-.article input[type =submit] {
-  background: #fff;
-  border-radius: 0.5em;
-  color: #5c2e00;
+.post input[type =submit] {
   float: right;
-  font-family: sans, sans-serif;
-  padding: 0.5em;
 }
-.article input[type =text] {
-  margin-left: 1em;
-  width: 10em;
-}
-.article textarea {
-  border: 1px solid #5c2e00;
-  border-radius: 1em;
-  height: 5em;
-  padding: 1em;
-  width: 50%;
-}
-.article .created_at {
+.post .created_at {
   display: none;
 }
-.article .body {
+.post .body {
   margin-top: 1em;
 }
-.article .body p {
+.post .body p {
   background-color: #fff;
   border: 1px solid #5c2e00;
   border-radius: 1em;
@@ -85,7 +95,7 @@ h2 {
   padding: 1em;
   width: 50%;
 }
-.article .comment {
+.post .comment {
   background: #ffb2b2;
   border-left: 1px solid #5c2e00;
   border-right: 1px solid #5c2e00;
@@ -93,27 +103,33 @@ h2 {
   padding: 0.5em;
   width: 50%;
 }
-.article .comment:first-child {
+.post .comment:first-child {
   border-radius: 1em 1em 0 0;
   border-top: 1px solid #5c2e00;
 }
-.article .comment:last-child {
+.post .comment:last-child {
   border-bottom: 1px solid #5c2e00;
   border-radius: 0 0 1em 1em;
 }
-.article .comment:nth-child(even) {
+.post .comment:nth-child(even) {
   background: #fff;
 }
-.article #comment-author {
+.post .comment.single-comment {
+  border-radius: 1em;
+}
+.post #comment-author {
   margin-top: 1em;
 }
-.article #comment-content {
+.post #comment-content {
   margin-bottom: 0em;
 }
-.article #comment-list {
+.post #comment-list {
   margin-top: 1em;
 }
-.article #comment-submit {
+.post #comment-submit {
   margin: auto;
   width: 50%;
+}
+#edit-article-body {
+  height: 15em;
 }

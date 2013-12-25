@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  div.article
+  div.post
     h1= title
     div.created_at= article.created_at
     div.body
@@ -11,12 +11,19 @@ block content
       h2 Comments
       if article.comments.length > 0
         div#comment-list
-          - each comment in article.comments
-            div.comment
+          if article.comments.length == 1
+            div.comment.single-comment
               span.person
-                b= comment.person
-              span  says : 
-              span= comment.comment
+                b= article.comments[0].person
+              span  says: 
+              span= article.comments[0].comment
+          else
+            - each comment in article.comments
+              div.comment
+                span.person
+                  b= comment.person
+                span  says: 
+                span= comment.comment
       else
         i This post has no comments yet.
     hr

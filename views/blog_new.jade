@@ -5,10 +5,9 @@ block content
   form(method="post")
     div
       div
-        span Title :
-        input(type="text", name="title", id="editArticleTitle")
+        span Title:
+        input(type="text", name="title", id="edit-article-title")
       div
-        span Body :
-        textarea(name="body", row=20, id="editArticleBody")
-      div#editArticleSubmit
+        textarea(name="body", row=20, id="edit-article-body", placeholder="Type your post here")
+      div#edit-article-submit
         input(type="submit", value="Submit")
